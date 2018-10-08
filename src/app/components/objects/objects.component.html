@@ -1,0 +1,64 @@
+<div class="row">
+	<div class="col-sm-3" *ngFor="let obj of objects">
+		<a href="{{obj.url}}" target="_blank">
+			<img alt="" [src]="obj.image" width="133px" />
+		</a>
+		<br />
+		<a href="http://www.san-simeiz.ru" target="_blank">{{obj.name}}</a>, {{obj.region}}
+	</div>
+</div>
+
+<!--<table class="table-price" style="width:100%;">-->
+	<!--<tbody>-->
+	<!--<tr>-->
+		<!--<td align="center" width="16%">-->
+			<!--<a href="http://www.san-simeiz.ru" target="_blank">-->
+				<!--<img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/11_0_0.jpg" -->
+				  	 <!--width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.san-simeiz.ru" target="_blank">Санаторий "Симеиз"</a>, Большая Ялта</font></td>-->
+		<!---->
+		<!---->
+		<!---->
+		<!---->
+		<!---->
+		<!--<td align="center" width="16%"><a href="http://www.gornyi.com/" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/dsc01780.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.gornyi.com/" target="_blank">Санаторий "Горный"</a>, Большая Ялта</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.ripario.ru" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/204716927_0.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.ripario.ru" target="_blank">Ripario Hotel Group</a>, Большая Ялта</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://u-polus.com/" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/914298691.jpeg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://u-polus.com/" target="_blank">Пансионат "Южный полюс"</a>, Большая Ялта</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.sankarasan.ru" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/dvorec.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.sankarasan.ru" target="_blank">Санаторий "Карасанский"</a>, Большая Ялта</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.ai-petry.ru" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/p1017119.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.ai-petry.ru" target="_blank">Санаторий "Ай-Петри"</a>, Мисхор</font></td>-->
+	<!--</tr>-->
+	<!--<tr>-->
+		<!--<td align="center" width="16%"><a href="http://www.jaguarhotel.ru" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/7982z600_1.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.jaguarhotel.ru" target="_blank">Отель "Ягуар"</a>, Большая Ялта</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.san-yalta.com" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/k3_b.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.san-yalta.com" target="_blank">Санаторий "Южнобережный"</a>, Алупка</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.musson.crimea.com" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/p1010570.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.musson.crimea.com" target="_blank">Пансионат "Муссон"</a>, Город Ялта</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.cottedg.com/" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/dsc01276.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.cottedg.com/" target="_blank">Парк-отель "Родос"</a>, Кореиз</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://san-sechenova.ru/" target="_blank"><img alt="" src="http://san-sechenova.ru/sites/default/files/styles/large/public/main_0.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://san-sechenova.ru/" target="_blank">Санаторий имени Сеченова</a>, Ялта</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.ai-lia.com" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/dsc08724_0.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.ai-lia.com" target="_blank">Пансионат "Ай-Лия"</a>, Большая Алушта</font></td>-->
+	<!--</tr>-->
+	<!--<tr>-->
+		<!--<td align="center" width="16%"><a href="http://www.dsocmayak.com/" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/58.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.dsocmayak.com/" target="_blank">Санаторий "Маяк"</a>, Евпатория</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.san-primorie.com/" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/prim30.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.san-primorie.com/" target="_blank">Санаторий "Приморье"</a>, Евпатория</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.hotel-tanger.ru" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/dsc09789.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.hotel-tanger.ru" target="_blank">Пансионат с лечением "Танжер"</a>, Саки</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.fortuna.crimea.com" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/img_8471.preview.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.fortuna.crimea.com" target="_blank">Пансионат "Фортуна"</a>, Николаевка</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://www.ukraina1.com/" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/1996276a823f2b6be2425d34b87771db.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://www.ukraina1.com/" target="_blank">Санаторий "Украина-1"</a>, Феодосия</font></td>-->
+		<!--<td align="center" width="16%"><a href="http://mechta-hotel.com/" target="_blank"><img alt="" src="http://www.tour.crimea.com/sites/default/files/styles/business-list/public/photos/dsc06240.jpg" width="133px" /></a><br />-->
+			<!--<font size="-2"><a href="http://mechta-hotel.com/" target="_blank">Гостиница "Мечта"</a>, Феодосия</font></td>-->
+	<!--</tr>-->
+	<!--</tbody>-->
+<!--</table>-->

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="code">Проверка заказа</label>
+        <input id="code" class="form-control" type="text"
+               [(ngModel)]="orderCode">
+      </div>
+      <div class="btn btn-primary" (click)="checkOrder()">Проверить</div>
+      <br> <br>
+      <div *ngIf="order" class="mb-4">
+        Код - {{order.Code}} <br>
+        Статус - {{order.StatusName}} <br>
+        {{order.Country}} - {{order.City}} <br>
+        Стоимость - {{order.ClientPrice}} <br>
+        Предоплата - {{order.DebtToAgent}} <br>
+        Даты {{order.CheckInDate.Serialized}} - {{order.CheckOutDate.Serialized}} <br>
+        Длительность {{order.Days}}
+      </div>
+    </div>
+  </div>
+</div>

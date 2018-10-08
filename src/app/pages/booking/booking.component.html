@@ -1,0 +1,209 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+        <div class="form-group">
+          <label>Классы отдыха</label>
+          <ng-select [items]="classes"
+                     [multiple]="true"
+                     [(ngModel)]="searchParams.classes"
+                     bindValue="key" bindLabel="name"
+                     (change)="changeClass()"
+                     class="form-control">
+          </ng-select>
+        </div>
+
+        <div class="form-group">
+          <label>Регионы</label>
+          <ng-select [items]="toCities"
+                     [(ngModel)]="searchParams.cityCodes"
+                     bindLabel="name"
+                     (change)="changeCity()"
+                     class="form-control">
+          </ng-select>
+        </div>
+
+        <div class="form-group">
+          <label>Объекты</label>
+          <ng-select [items]="searchHotelsResult"
+                     [(ngModel)]="searchParams.hotels"
+                     bindLabel="name"
+                     (change)="changeHotel()"
+                     class="form-control">
+          </ng-select>
+        </div>
+
+        <div class="form-group">
+          <label>Вылет</label>
+          <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd"
+                   name="dp" [(ngModel)]="searchParams.startDate"
+                   ngbDatepicker #d1="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" (click)="d1.toggle()" type="button">
+                <i class="fa fa-calendar-alt"></i>
+              </button>
+            </div>
+            <input class="form-control" placeholder="yyyy-mm-dd"
+                   name="dp" [(ngModel)]="searchParams.endDate"
+                   ngbDatepicker #d2="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" (click)="d2.toggle()" type="button">
+                <i class="fa fa-calendar-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Продолжительность</label>
+          <ng-select [items]="[1,2,3,4,5,6,7,8,9,10]"
+                     [(ngModel)]="searchParams.durations"
+                     class="form-control">
+          </ng-select>
+        </div>
+
+        <div class="form-group">
+          <label>Взрослых</label>
+          <ng-select [items]="[1,2,3,4,5,6,7,8,9,10]"
+                     [(ngModel)]="searchParams.adults"
+                     class="form-control">
+          </ng-select>
+        </div>
+
+        <div class="btn btn-primary" (click)="startSearch()">Поиск</div>
+        <div class="btn btn-primary ml-2" (click)="checkPlaces()">Посмотреть наличие мест</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="card">
+        <div class="card-body">
+          <h5>Результат поиска</h5>
+          <table *ngIf="step === 'step1'" class="table table-sm table-striped">
+            <tr>
+              <th>Тип</th>
+              <th>Дата заезда</th>
+              <th>Длительность</th>
+              <th>Питание</th>
+              <th>Цена</th>
+              <th></th>
+            </tr>
+            <ng-container *ngFor="let hotel of hotelMinPriceResult">
+              <ng-container *ngFor="let cost of hotel.Costs">
+                <tr>
+                  <td>{{cost.Accmd}}</td>
+                  <td>{{cost.DptDate}}</td>
+                  <td>{{cost.Nights}}</td>
+                  <td>{{cost.Meal}}</td>
+                  <td>{{cost.Cost | currency : '₽'}}</td>
+                  <td>
+                    <div class="btn btn-primary" (click)="buy()">
+                      <i class="fa fa-shopping-cart"></i>
+                    </div>
+                  </td>
+                </tr>
+              </ng-container>
+            </ng-container>
+          </table>
+
+          <ng-container *ngIf="step === 'step2'">
+            <img src="http://2015.mag.travel/TourGateServices/2285629_490_200.file" alt="">
+            <div [innerHTML]="hotel.Description"></div>
+            <table class="table table-sm table-striped">
+              <tr>
+                <th>Тип</th>
+                <th>Дата заезда</th>
+                <th>Дата выезда</th>
+                <th>Стоимость</th>
+                <th></th>
+              </tr>
+              <tr *ngFor="let tour of tours">
+                <td>{{tour.Tour.Hotel.Room.RoomCategoryName}} {{tour.Tour.Hotel.Room.RoomTypeName}}</td>
+                <td>{{tour.Tour.DepartureDate | date}}</td>
+                <td>{{tour.Tour.EndDate | date}}</td>
+                <td>{{tour.Tour.Cost.Brutto | currency : '₽'}}</td>
+                <td>
+                  <div class="btn btn-primary" (click)="selectTour(tour)">
+                    <i class="fa fa-shopping-cart"></i>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </ng-container>
+          <table *ngIf="step === 'step3'" class="table table-sm table-striped">
+            <tr>
+              <th>Фамилия</th>
+              <th>Имя</th>
+              <th>Отчество</th>
+              <th>Пол</th>
+              <th>Родился</th>
+              <th>Гражданство</th>
+              <th>Паспорт РФ</th>
+              <th>Выдан</th>
+            </tr>
+            <tr *ngFor="let tourist of searchParams.tourists">
+              <td>
+                <input class="form-control form-control-sm"
+                       [(ngModel)]="tourist.LastName">
+              </td>
+              <td>
+                <input class="form-control form-control-sm"
+                       [(ngModel)]="tourist.FirstName">
+              </td>
+              <td>
+                <input class="form-control form-control-sm"
+                       [(ngModel)]="tourist.MiddleName">
+              </td>
+              <td>
+                <div class="btn-group">
+                  <div class="btn btn-sm"
+                       [ngClass]="{'btn-primary': tourist.Gender === 0}"
+                       (click)="tourist.Gender = 0">
+                    <i class="fas fa-male"></i>
+                  </div>
+                  <div class="btn btn-sm"
+                       [ngClass]="{'btn-primary': tourist.Gender === 1}"
+                       (click)="tourist.Gender = 1">
+                    <i class="fas fa-female"></i>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <!--<input class="form-control form-control-sm" placeholder="yyyy-mm-dd"-->
+                       <!--name="dp" [(ngModel)]="tourist.DateOfBirth.value"-->
+                       <!--ngbDatepicker #d1="ngbDatepicker">-->
+              </td>
+              <td>
+                <ng-select class="form-control form-control-sm"
+                           [items]="citizenships"
+                           [(ngModel)]="tourist.Citizenship"
+                           bindValue="Code" bindLabel="Name"
+                        name="" id=""></ng-select>
+              </td>
+              <td>
+                <input class="form-control form-control-sm"
+                       [(ngModel)]="tourist.DocumentNumber">
+              </td>
+              <td>
+                <!--<input class="form-control form-control-sm"-->
+                       <!--[(ngModel)]="tourist.DocumentDateOfIssuance.value">-->
+              </td>
+            </tr>
+          </table>
+
+          <div *ngIf="step === 'step3'" class="btn btn-primary" (click)="book()">
+            <i class="fa fa-shopping-cart mr-2"></i> Забронировать
+          </div>
+
+          <div class="spinner" *ngIf="loading">
+            <i class="fa fa-spinner fa-spin"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

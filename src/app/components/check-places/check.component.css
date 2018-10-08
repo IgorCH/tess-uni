@@ -1,0 +1,19 @@
+td.place {
+  height: 30px;
+  border: 1px solid black
+}
+
+td.place.red {
+  background: red;
+}
+
+td.place.green {
+  background: green;
+}
+
+td.place.yellow {
+  background: yellow;
+}
+
+
+

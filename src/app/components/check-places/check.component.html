@@ -1,0 +1,33 @@
+<div class="modal-header">
+  Наличие мест
+</div>
+
+<div class="modal-body">
+  <div class="row">
+    <table class="table table-sm table-striped">
+      <tr>
+        <th>
+          Номер/{{monthNames[month - 1]}}({{year}})
+          <div class="btn btn-secondary" (click)="prevMonth()">
+            <i class="fa fa-chevron-left"></i>
+          </div>
+          <div class="btn btn-secondary" (click)="nextMonth()">
+            <i class="fa fa-chevron-right"></i>
+          </div>
+        </th>
+        <th *ngFor="let day of days">{{day}}</th>
+      </tr>
+      <tr *ngFor="let hotel of hotelPlaces">
+        <td>{{hotel.name}}</td>
+        <td *ngFor="let place of hotel.places"
+            class="place red"
+            [ngClass]="{green: place.attributes.Places === 'есть',
+                          yellow: place.attributes.Places === 'запрос'}"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button (click)="close()">Закрыть</button>
+</div>

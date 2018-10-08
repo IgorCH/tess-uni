@@ -1,0 +1,170 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<div id="map" style="height: 660px"></div>
+			<div class="booking_widget">
+				<div class="form-group">
+					<label>Регионы</label>
+					<ng-select [items]="toCities"
+										 [(ngModel)]="searchParams.cityCodes"
+										 bindLabel="Name" bindValue="Code"
+										 (change)="changeCity($event)"
+										 class="form-control">
+					</ng-select>
+				</div>
+
+				<div class="form-group">
+					<label>Объекты</label>
+					<ng-select [items]="searchHotelsResult"
+										 [(ngModel)]="searchParams.hotels"
+										 bindLabel="Name" bindValue="Code"
+										 (change)="changeHotel($event)"
+										 class="form-control">
+					</ng-select>
+				</div>
+				<div class="form-group">
+					<label>Вылет</label>
+					<div class="input-group">
+						<input class="form-control" placeholder="yyyy-mm-dd"
+									 name="dp" [(ngModel)]="searchParams.startDate"
+									 ngbDatepicker #d1="ngbDatepicker">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" (click)="d1.toggle()" type="button">
+								<img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+							</button>
+						</div>
+					</div>
+					<div class="input-group">
+						<input class="form-control" placeholder="yyyy-mm-dd"
+									 name="dp" [(ngModel)]="searchParams.endDate"
+									 ngbDatepicker #d2="ngbDatepicker">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" (click)="d2.toggle()" type="button">
+								<img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Продолжительность</label>
+					<ng-select [items]="[1,2,3,4,5,6,7,8,9,10]"
+										 [(ngModel)]="searchParams.durations"
+										 class="form-control">
+					</ng-select>
+				</div>
+				<div class="form-group">
+					<label>Взрослых</label>
+					<ng-select [items]="[1,2,3,4,5,6,7,8,9,10]"
+										 [(ngModel)]="searchParams.adults"
+										 class="form-control">
+					</ng-select>
+				</div>
+				<!--<div class="form-group">-->
+				<!--<label>Детей</label>-->
+				<!--<select [(ngModel)]="searchParams.childAges"-->
+				<!--class="form-control">-->
+				<!--<option *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]" [value]="item">-->
+				<!--{{item}}-->
+				<!--</option>-->
+				<!--</select>-->
+				<!--</div>-->
+				<!--<div class="form-group">-->
+				<!--<label>Туроператоры</label>-->
+				<!--<select [(ngModel)]="searchParams.from"-->
+				<!--class="form-control">-->
+				<!--<option *ngFor="let item of filteredSuppliers?.Suppliers" [value]="item.Code">-->
+				<!--{{item.Name}}-->
+				<!--</option>-->
+				<!--</select>-->
+				<!--&lt;!&ndash;<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>&ndash;&gt;-->
+				<!--</div>-->
+				<!--<div class="form-group">-->
+				<!--<label>Валюта</label>-->
+				<!--<select [(ngModel)]="searchParams.currency"-->
+				<!--class="form-control">-->
+				<!--<option *ngFor="let item of ['RUB', 'USD', 'EUR', 'UAH']" [value]="item">-->
+				<!--{{item}}-->
+				<!--</option>-->
+				<!--</select>-->
+				<!--</div>-->
+				<!--<div class="form-group">-->
+				<!--<label>Категория отеля</label>-->
+				<!--<select [(ngModel)]="searchParams.from"-->
+				<!--class="form-control">-->
+				<!--<option *ngFor="let item of hotelCategories" [value]="item.Id">-->
+				<!--{{item.Name}}-->
+				<!--</option>-->
+				<!--</select>-->
+				<!--</div>-->
+				<!--<div class="form-group">-->
+				<!--<label>Типы питания</label>-->
+				<!--<select [(ngModel)]="searchParams.mealType"-->
+				<!--class="form-control">-->
+				<!--<option *ngFor="let item of mealTypes" [value]="item.Id">-->
+				<!--{{item.Name}}-->
+				<!--</option>-->
+				<!--</select>-->
+				<!--</div>-->
+				<!--<div class="row">-->
+				<!--<div class="col-6">-->
+				<!--<div class="form-group">-->
+				<!--<label>Отдых для отдыха</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_rest"> <br>-->
+				<!--<label>Отдых для здоровья</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_health"> <br>-->
+				<!--<label>Отдых для красота</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_beauty"> <br>-->
+				<!--<label>Отдых для спорт</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_sport"> <br>-->
+				<!--<label>Отдых для дети</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_child"> <br>-->
+				<!--<label>Отдых для бизнес</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_busy"> <br>-->
+				<!--<label>Отдых для автомобилистов</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_auto"> <br>-->
+				<!--<label>Отдых для велосипедистов</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_velo"> <br>-->
+				<!--<label>Отдых для дикарей</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_wild"> <br>-->
+				<!--</div>-->
+				<!--</div>-->
+				<!--<div class="col-6">-->
+				<!--<div class="form-group">-->
+				<!--<label>Отдых для экстремалы</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_extr"> <br>-->
+				<!--<label>Отдых для иностранцы</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_inos"> <br>-->
+				<!--<label>Отдых для охотников и рыболовов</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_hunting"> <br>-->
+				<!--<label>Отдых для искуcства</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_art"> <br>-->
+				<!--<label>Отдых для гастрономия (винный туризм)</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_gastro"> <br>-->
+				<!--<label>Отдых для конференц сервис</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_conference"> <br>-->
+				<!--<label>Отдых для крымчан</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_crimea"> <br>-->
+				<!--<label>События</label>-->
+				<!--<input type="checkbox" [(ngModel)]="searchParams.flag_events"> <br>-->
+				<!--</div>-->
+				<!--</div>-->
+				<!--</div>-->
+				<div class="btn btn-primary" (click)="startSearch()">Поиск</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="content">
+				<h5>Другие варианты отдыха и лечения в Крыму</h5>
+				<app-objects></app-objects>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<h5>Наши менеджеры</h5>
+			<app-managers></app-managers>
+		</div>
+	</div>
+</div>

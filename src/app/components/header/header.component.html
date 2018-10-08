@@ -1,0 +1,93 @@
+<div class="container-fluid header">
+	<div class="container">
+		<div id="logo">
+			<a href="/" title="Главная" rel="home"> <img src="http://tour.crimea.com/sites/default/files/logo_0.png" alt="Главная"> </a>
+		</div>
+		<!--<a class="navbar-brand" href="https://github.com/ngx-rocket">ТЕСС</a>-->
+
+		<div class="span5">
+			<div class="region region-header-middle">
+				<div id="block-realia-blocks-header-contact" class="block block-realia-blocks">
+					<div class="title">
+					</div><!-- /.title -->
+
+					<div class="content">
+
+						<div class="info">
+							<div class="site-email">
+								<a href="mailto:vvv@crimea.com">vvv@crimea.com</a>
+							</div>
+							<!-- /.site-email -->
+							<div class="site-phone">
+								<span>+7 3652 531222</span>
+							</div>
+							<!-- /.site-phone -->
+						</div>  </div><!-- /.content -->
+				</div><!-- /.block -->
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<div class="container">
+			<button class="navbar-toggler" type="button" aria-controls="navbar-menu"
+							aria-label="Toggle navigation" (click)="toggleMenu()" [attr.aria-expanded]="!menuHidden">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
+						<i class="fas fa-home mr-2"></i>
+						<span translate>Главная</span>
+					</a>
+					<a class="nav-item nav-link text-uppercase" routerLink="/booking" routerLinkActive="active">
+						<i class="fas fa-home mr-2"></i>
+						<span translate>Бронирование</span>
+					</a>
+					<a class="nav-item nav-link text-uppercase" routerLink="/crimea" routerLinkActive="active">
+						<i class="fas fa-home mr-2"></i>
+						<span translate>Отдых в Крыму</span>
+					</a>
+					<a class="nav-item nav-link text-uppercase" routerLink="/about" routerLinkActive="active">
+						<i class="fas fa-home mr-2"></i>
+						<span translate>О Нас</span>
+					</a>
+					<a class="nav-item nav-link text-uppercase" routerLink="/contacts" routerLinkActive="active">
+						<i class="fas fa-home mr-2"></i>
+						<span translate>Контакты</span>
+					</a>
+					<a class="nav-item nav-link text-uppercase" routerLink="/partners" routerLinkActive="active">
+						<i class="fas fa-question-circle mr-2"></i>
+						<span translate>Партнерам</span>
+					</a>
+				</div>
+				<!--<div class="navbar-nav ml-auto">-->
+				<!--<div class="nav-item" ngbDropdown placement="bottom-right">-->
+				<!--<a id="language-dropdown" class="nav-link" ngbDropdownToggle>{{currentLanguage}}</a>-->
+				<!--<div ngbDropdownMenu aria-labelledby="language-dropdown">-->
+				<!--<button class="dropdown-item" *ngFor="let language of languages" (click)="setLanguage(language)">-->
+				<!--{{language}}-->
+				<!--</button>-->
+				<!--</div>-->
+				<!--</div>-->
+				<!--<div class="nav-item" ngbDropdown placement="bottom-right">-->
+				<!--<a id="user-dropdown" class="nav-link" ngbDropdownToggle>-->
+				<!--<i class="fas fa-user-circle"></i>-->
+				<!--</a>-->
+				<!--<div ngbDropdownMenu aria-labelledby="user-dropdown">-->
+				<!--<h6 class="dropdown-header">-->
+				<!--<span translate>Logged in as</span> <b>{{username}}</b></h6>-->
+				<!--<div class="dropdown-divider"></div>-->
+				<!--<button class="dropdown-item" (click)="logout()" translate>Logout</button>-->
+				<!--</div>-->
+				<!--</div>-->
+				<!--</div>-->
+			</div>
+		</div>
+	</nav>
+</header>
+
+
