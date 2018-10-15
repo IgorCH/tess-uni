@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
 import {finalize} from 'rxjs/operators';
 import {DomSanitizer} from '@angular/platform-browser';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
@@ -19,6 +19,7 @@ import {CheckComponent} from '../../components/check-places/check.component';
 import {Place} from '../../models/place.model';
 import {UtilsService} from '../../services/utils.service';
 import {BookParams} from '../../models/book-params.model';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-booking',
@@ -57,7 +58,8 @@ export class BookingComponent implements OnInit {
   public loading: boolean;
   public citizenships: any[];
 
-  constructor(private ds: DsService,
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,
+              private ds: DsService,
               private san: DomSanitizer,
               private utils: UtilsService,
               private http: HttpClient,
@@ -70,13 +72,16 @@ export class BookingComponent implements OnInit {
     this.ds.getCitizenships().then((cits: any[]) => {
       this.citizenships = cits || [];
     });
-    Promise.all([this.ds.initSOAP(), this.ds.getToken()]).then((values: any) => {
-      this.ds.getAllActiveHotelOption().then((res: any) => {
-        this.classes = res;
-        this.searchParams.classes = [];
-        this.changeClass();
+    if (isPlatformBrowser(this.platformId)) {
+      Promise.all([this.ds.initSOAP(), this.ds.getToken()]).then((values: any) => {
+        this.ds.getAllActiveHotelOption().then((res: any) => {
+          this.classes = res;
+          this.searchParams.classes = [];
+          this.changeClass();
+        });
       });
-    });
+    }
+
   }
 
   public changeClass() {

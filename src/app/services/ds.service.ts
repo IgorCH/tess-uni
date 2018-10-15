@@ -46,8 +46,7 @@ export class DsService {
       clientSecret: this.clientSecret
     };
 
-    let headers = new HttpHeaders({'Referer': 'localhostsx'});
-    return this.http.post(this.url + 'tourclient/token', this.utils.stringify(params), {headers: headers})
+    return this.http.post(this.url + 'tourclient/token', this.utils.stringify(params))
       .toPromise()
       .then((res: any) => {
         this.bearer = res.access_token;
@@ -186,17 +185,11 @@ export class DsService {
   }
 
   public getCitizenships() {
-    const options = {
-      headers: new HttpHeaders({ 'Authorization': 'Bearer ' + this.bearer })
-    };
     return this.http.get(this.url + 'tourclient/Dictionary/LoadCitizenships')
       .toPromise();
   }
 
   public getHotelInfo() {
-    const options = {
-      headers: new HttpHeaders({ 'Authorization': 'Bearer ' + this.bearer })
-    };
     return this.http.get(this.url + 'tourclient/search/ViewHotelInfo?hotelID=iopqJrhYNk&Debug=True')
       .toPromise();
   }

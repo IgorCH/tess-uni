@@ -23,11 +23,6 @@ import {isPlatformBrowser} from "@angular/common";
 
 declare const ymaps: any;
 
-function _window(): any {
-    // return the global native browser window object
-    return window;
-}
-
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -100,6 +95,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     public changeCity(city: any) {
+      if (isPlatformBrowser(this.platformId)) {
         const searchHotelsParams = new SearchHotelsParams();
         searchHotelsParams.departFrom = this.searchParams.departFrom;
         searchHotelsParams.countryCode = this.searchParams.countryCode;
@@ -108,43 +104,44 @@ export class HomeComponent implements OnInit, OnDestroy {
         searchHotelsParams.Page = 0;
         this.ds.searchHotels(searchHotelsParams).then((res: any) => {
 
-            res.Result.forEach((hotel: any) => {
-                // const marker = new ymaps.Placemark([hotel.Latitude, hotel.Longitude],
-                //   { hintContent: hotel.Name, balloonContent: hotel.Name });
+          res.Result.forEach((hotel: any) => {
+            // const marker = new ymaps.Placemark([hotel.Latitude, hotel.Longitude],
+            //   { hintContent: hotel.Name, balloonContent: hotel.Name });
 
-                const marker = new ymaps.GeoObject({
-                  // Описание геометрии.
-                  geometry: {
-                    type: 'Point',
-                    coordinates: [hotel.Latitude, hotel.Longitude]
-                  },
-                  // Свойства.
-                  properties: {
-                    // Контент метки.
-                    iconContent: hotel.Name,
-                    hintContent: hotel.Name
-                  }
-                }, {
-                  preset: 'islands#blackStretchyIcon'
-                });
-
-                this.yamarkers.push(marker);
-                this.yamap.geoObjects.add(marker);
-
-                marker.events.add('click', (params: any) => {
-                  const modal = this.modal.open(HotelCardComponent, {size: 'lg'});
-                  modal.result.then(() => {
-
-                  });
-                });
+            const marker = new ymaps.GeoObject({
+              // Описание геометрии.
+              geometry: {
+                type: 'Point',
+                coordinates: [hotel.Latitude, hotel.Longitude]
+              },
+              // Свойства.
+              properties: {
+                // Контент метки.
+                iconContent: hotel.Name,
+                hintContent: hotel.Name
+              }
+            }, {
+              preset: 'islands#blackStretchyIcon'
             });
 
-            this.searchHotelsResult = res.Result;
-            if (this.searchHotelsResult && this.searchHotelsResult.length) {
-                this.searchParams.hotels = this.searchHotelsResult[0].Code;
-                this.changeHotel(null);
-            }
+            this.yamarkers.push(marker);
+            this.yamap.geoObjects.add(marker);
+
+            marker.events.add('click', (params: any) => {
+              const modal = this.modal.open(HotelCardComponent, { size: 'lg' });
+              modal.result.then(() => {
+
+              });
+            });
+          });
+
+          this.searchHotelsResult = res.Result;
+          if (this.searchHotelsResult && this.searchHotelsResult.length) {
+            this.searchParams.hotels = this.searchHotelsResult[0].Code;
+            this.changeHotel(null);
+          }
         });
+      }
     }
 
     public changeHotel(hotel: any) {
@@ -152,9 +149,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     public removeCity() {
+      if (isPlatformBrowser(this.platformId)) {
         this.yamarkers.forEach((marker: any) => {
           this.yamap.geoObjects.remove(marker);
         });
+      }
     }
 
     public startSearch() {
@@ -163,7 +162,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
+      if (isPlatformBrowser(this.platformId)) {
         this.yamap.destroy();
+      }
     }
 
 }
