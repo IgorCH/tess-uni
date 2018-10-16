@@ -117,7 +117,7 @@ export class BookingComponent implements OnInit {
   }
 
   public changeHotel() {
-    this.ds.getHotelInfo().then((hotel: any) => {
+    this.ds.getHotelInfo('iopqJrhYNk').then((hotel: any) => {
       this.hotel = hotel.HotelData;
     });
   }

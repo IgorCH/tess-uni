@@ -2,16 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13c2c2cd-edf4-4e81-8a90-28af7b05e18e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info-routing.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/hotels/hotels.component.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/hotels/tanger/tanger-routing.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/hotels/hotels-routing.module.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/hotels/tanger/tanger.component.html" afterPath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/hotels/tanger/tanger.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/hotels/hotels.component.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/hotels/tanger/tanger.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/hotels/hotels.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/check-order/check-order-routing.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/check-order/check-order.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/check-order/check-order.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/check-order/check-order.module.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/1.c8b232802033ffc486ce.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/2.5fbc908a419b1304236f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/3.8c84d11604871a90ea45.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/4.7b2fdf9cce19e373aa48.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/5.39dbf753972a746ac853.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/6.a996cda198d8a83000cc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/7.582eccce09a133bc3f33.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/8.f643eb232f3e98cde8cb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/common.986c09c2a9d83919c273.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/main.9e5097ad3ad25fb49b70.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/polyfills.3cef234c4d294a804d9e.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/browser/runtime.3a6ab30d510d4ff594c4.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/browser/3rdpartylicenses.txt" afterPath="$PROJECT_DIR$/dist/browser/3rdpartylicenses.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/browser/index.html" afterPath="$PROJECT_DIR$/dist/browser/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/server/main.js" afterPath="$PROJECT_DIR$/dist/server/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/models/hotel.model.ts" afterPath="$PROJECT_DIR$/src/app/models/hotel.model.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/booking/booking.component.html" afterPath="$PROJECT_DIR$/src/app/pages/booking/booking.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/booking/booking.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/booking/booking.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html" afterPath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/ds.service.ts" afterPath="$PROJECT_DIR$/src/app/services/ds.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,120 +46,94 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="booking.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/booking/booking.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="71" column="21" lean-forward="false" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ds.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/services/ds.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotel-info.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotel-info-routing.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotel-info.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotels.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/hotels/hotels.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotels.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/hotels/hotels.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotels-routing.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/hotels/hotels-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotels.module.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/hotels/hotels.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotel-info.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.4945355">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="check-order.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/check-order/check-order.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+                  <folding>
+                    <element signature="e#0#81#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="check-order.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/check-order/check-order.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="hotel-info.component.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="242">
+                  <caret line="60" column="41" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#1931#1937#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="ds.service.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/services/ds.service.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="810">
+                  <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                    <element signature="n#!!block;n#initSOAP#0;n#DsService#0" expanded="false" />
+                    <element signature="n#!!block;n#quotaGetPlaces#0;n#DsService#0" expanded="false" />
+                    <element signature="n#!!block;n#getAllActiveHotelOption#0;n#DsService#0" expanded="false" />
+                    <element signature="n#!!block;n#getAllActiveRegion#0;n#DsService#0" expanded="false" />
+                    <element signature="n#!!block;n#getAllActiveHotel#0;n#DsService#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/pages/home/home.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-330">
+                  <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="order.model.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/models/order.model.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -149,7 +144,27 @@
       <find>&lt;&lt;&lt;</find>
       <find>getToken</find>
       <find>ages/hotels/hote</find>
+      <find>Hotel</find>
+      <find>Image</find>
+      <find>NgxGalleryModule</find>
+      <find>NgxGalleryAnimation</find>
+      <find>yan</find>
+      <find>Contacts</find>
+      <find>hotelInfo</find>
+      <find>Hotels</find>
+      <find>ymaps</find>
+      <find>ymaps.Geo</find>
+      <find>.red</find>
+      <find>.font-primary</find>
+      <find>Email</find>
     </findStrings>
+    <replaceStrings>
+      <replace>CheckOrder</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/app/pages/check-order</dir>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -157,19 +172,33 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/pages/home/home.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/booking/booking.component.ts" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/app/services/ds.service.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/hotel-info/hotels.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info-routing.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html" />
         <option value="$PROJECT_DIR$/src/app/pages/hotels/hotels.component.html" />
         <option value="$PROJECT_DIR$/src/app/pages/hotels/hotels.component.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/hotels/hotels-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/hotels/hotels.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/booking/booking.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/models/hotel.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/pipes/safe.pipe.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/booking/booking.component.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/check-order/hotels.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/check-order/check-order-routing.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/models/order.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/check-order/check-order.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/ds.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/check-order/check-order.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/check-order/check-order.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/pages/check-order/check-order.component.html" />
+        <option value="$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html" />
       </list>
     </option>
   </component>
@@ -242,15 +271,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="hotel-info" type="462c0819:PsiDirectoryNode" />
+              <item name="check-order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tess-git" type="b2602c69:ProjectViewProjectNode" />
               <item name="tess-git" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="hotels" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -273,7 +301,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/pages/check-order" />
+      <recent name="$PROJECT_DIR$/src/app/models" />
       <recent name="$PROJECT_DIR$/src/app/pages" />
+      <recent name="$PROJECT_DIR$/src/app/pages/hotel-info" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/pages/hotels" />
@@ -346,10 +377,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="npm.serve:ssr" />
-        <item index="1" class="java.lang.String" itemvalue="npm.build:ssr" />
-        <item index="2" class="java.lang.String" itemvalue="npm.serve:prerender" />
-        <item index="3" class="java.lang.String" itemvalue="npm.build:prerender" />
+        <item index="0" class="java.lang.String" itemvalue="npm.build:ssr" />
+        <item index="1" class="java.lang.String" itemvalue="npm.serve:ssr" />
+        <item index="2" class="java.lang.String" itemvalue="npm.build:prerender" />
+        <item index="3" class="java.lang.String" itemvalue="npm.serve:prerender" />
         <item index="4" class="java.lang.String" itemvalue="npm.generate:prerender" />
       </list>
     </recent_temporary>
@@ -365,26 +396,27 @@
       <option name="presentableId" value="Default" />
       <updated>1538984428209</updated>
       <workItem from="1538984429733" duration="2552000" />
-      <workItem from="1539593419156" duration="3612000" />
+      <workItem from="1539593419156" duration="25519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6164000" />
+    <option name="totallyTimeSpent" value="28071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="733" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12787926" sideWeight="0.80133927" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3105691" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.196" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12787926" sideWeight="0.19866072" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21788618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18699187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27154472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -456,27 +488,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/home/home.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/pages/hotels/hotels-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="61" column="64" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="64" />
+        <state relative-caret-position="75">
+          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/platform-browser/src/browser/transfer_state.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/booking/booking.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="71" column="21" lean-forward="false" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+        <state relative-caret-position="99">
+          <caret line="119" column="36" lean-forward="false" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/ds.service.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/pages/booking/booking.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -490,20 +534,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="167">
+          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pipes/safe.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#54#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="240">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
           <folding>
-            <element signature="e#0#81#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/booking/booking.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="66" column="2" lean-forward="true" selection-start-line="66" selection-start-column="2" selection-end-line="66" selection-end-column="2" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/hotels/hotels.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -526,32 +625,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/hotels/hotels-routing.module.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/pages/check-order/check-order-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="30">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/hotel.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="96" column="45" lean-forward="false" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+            <element signature="e#1307#1775#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.module.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/pages/check-order/check-order.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="90">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/order.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/ds.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#!!block;n#initSOAP#0;n#DsService#0" expanded="false" />
+            <element signature="n#!!block;n#quotaGetPlaces#0;n#DsService#0" expanded="false" />
+            <element signature="n#!!block;n#getAllActiveHotelOption#0;n#DsService#0" expanded="false" />
+            <element signature="n#!!block;n#getAllActiveRegion#0;n#DsService#0" expanded="false" />
+            <element signature="n#!!block;n#getAllActiveHotel#0;n#DsService#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/hotels/hotels.module.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/check-order/check-order.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/check-order/check-order.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/check-order/check-order.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/hotel-info/hotel-info.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="60" column="41" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <folding>
+            <element signature="e#1931#1937#0" expanded="true" />
           </folding>
         </state>
       </provider>

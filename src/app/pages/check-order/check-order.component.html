@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>№ заказа: {{order}}</h5>
+        </div>
+        <div class="card-body">
+          <div>Регион: {{orderInfo.Country}}, {{orderInfo.City}}</div>
+          <div>Дата заезда: {{orderInfo.CheckInDate.Serialized}}</div>
+          <div>Дата выезда {{orderInfo.CheckOutDate.Serialized}}</div>
+          <div>Стоимость: {{orderInfo.ClientPrice | currency : 'RUR'}}</div>
+          <div [class.text-danger]="orderInfo.StatusName === 'не обработана'"
+               [class.text-primary]="orderInfo.StatusName !== 'не обработана'">{{orderInfo.StatusName}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

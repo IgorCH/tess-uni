@@ -69,7 +69,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         //this.classes = this.ds.tessClasses;
         if (isPlatformBrowser(this.platformId)) {
             ymaps.ready(() => {
-                console.log('yamaps ready');
                 this.yamap = new ymaps.Map('map', {
                     center: [44.717009, 34.372252],
                     zoom: 10

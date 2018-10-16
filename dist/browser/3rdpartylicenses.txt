@@ -628,6 +628,10 @@ MIT
 MIT
 MIT
 
+ngx-gallery@5.7.0
+MIT
+MIT
+
 @ng-bootstrap/ng-bootstrap@3.2.2
 MIT
 The MIT License (MIT)

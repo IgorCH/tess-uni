@@ -11,6 +11,7 @@ import {HotelCardComponent} from './components/hotel-card/hotel-card.component';
 import {SearchWidgetComponent} from "./components/search-widget/search-widget.component";
 import {SharedComponentsModule} from "./components/shared-components.module";
 import {CommonModule} from "@angular/common";
+import {NgxGalleryModule} from 'ngx-gallery';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {CommonModule} from "@angular/common";
     NgbModule,
     HttpClientModule,
     BrowserModule.withServerTransition({ appId: 'my-app' }),
-      CommonModule,
+    NgxGalleryModule,
+    CommonModule,
     AppRoutingModule,
     TransferHttpCacheModule
   ],

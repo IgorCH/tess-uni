@@ -9,7 +9,7 @@ import {StartNewParams} from '../models/start-new-params.model';
 import {PageParams} from '../models/page-params.model';
 import {MealTypesParams} from '../models/meal-types-params.model';
 import {NewToursParams} from '../models/new-tours-params.model';
-import {Hotel} from '../models/hotel.model';
+import {HotelInfo} from '../models/hotel.model';
 import {NewToursResult} from '../models/new-tours-result.model';
 import {SearchHotelsParams} from '../models/search-hotels-params.model';
 import {StartParams} from '../models/start-params.model';
@@ -45,12 +45,15 @@ export class DsService {
       name: this.name,
       clientSecret: this.clientSecret
     };
-
-    return this.http.post(this.url + 'tourclient/token', this.utils.stringify(params))
-      .toPromise()
-      .then((res: any) => {
-        this.bearer = res.access_token;
-      });
+    if (!this.bearer) {
+      return this.http.post(this.url + 'tourclient/token', this.utils.stringify(params))
+        .toPromise()
+        .then((res: any) => {
+          this.bearer = res.access_token;
+        });
+    } else {
+      return Promise.resolve()
+    }
   }
 
   public getCountries(): any {
@@ -189,10 +192,72 @@ export class DsService {
       .toPromise();
   }
 
-  public getHotelInfo() {
-    return this.http.get(this.url + 'tourclient/search/ViewHotelInfo?hotelID=iopqJrhYNk&Debug=True')
+  public getHotelInfo(hotelId: string) {
+    return this.http.get(this.url + 'tourclient/search/ViewHotelInfo?hotelID=' + hotelId)
       .toPromise();
   }
+
+  public getManagersForAgreement(id: any) {
+    const options = {
+      headers: new HttpHeaders({
+        'Authorization': 'Bearer ' + this.bearer,
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+      })
+    };
+
+    return this.http.post(this.url + 'tourclient/Order/GetManagersForAgreement',
+      'request=' + encodeURIComponent(JSON.stringify({ AgreementCode: id })),
+      options)
+      .toPromise();
+  }
+
+  public getBonus(clientId: string) {
+    const options = {
+      headers: new HttpHeaders({ 'Authorization': 'Bearer ' + this.bearer })
+    };
+    return this.http.get(this.url + 'tourclient/Bonus?clientId=' + clientId, options)
+      .toPromise();
+  }
+
+  public getAgreementPayments(code: string) {
+    const options = {
+      headers: new HttpHeaders({ 'Authorization': 'Bearer ' + this.bearer })
+    };
+    return this.http.get(this.url + 'tourclient/order/GetAgreementPayments?AgreementCode=' + code, options)
+      .toPromise();
+  }
+
+  public getHoldPayments(id: any) {
+    const options = {
+      headers: new HttpHeaders({ 'Authorization': 'Bearer ' + this.bearer })
+    };
+    return this.http.post(this.url + 'tourclient/PaymentIntegration/HoldPayments',
+      { AgreementCode: id},
+      options)
+      .toPromise();
+  }
+
+  public getVisaDocs(code: string) {
+    const options = {
+      headers: new HttpHeaders({ 'Authorization': 'Bearer ' + this.bearer })
+    };
+    return this.http.get(this.url + 'tourclient/visadocuments?agreementCode=' + code, options)
+      .toPromise();
+  }
+
+  public getTouristServices(code: string) {
+    const options = {
+      headers: new HttpHeaders({ 'Authorization': 'Bearer ' + this.bearer })
+    };
+    return this.http.get(this.url + 'tourclient/order/TouristServices?agreementCode=' + code, options)
+      .toPromise();
+  }
+
+  // xhr.open("GET", widget.host + "/tourclient/api/orderapi/GetFullAgreementData?AgreementCode=" + encodeURIComponent(obj.Code));
+  // xhr.open("GET", widget.host + "/tourclient/api/orderapi/GetOne" + encodeURI(param));
+  // xhr.open("POST", widget.host + "/tourclient/api/orderapi/PaymentSystemUrls?AgreementCode=" + encodeURIComponent(obj.Code));
+  // xhr.open("POST", widget.host + "/tourclient/api/orderapi/PayKeeperSystemUrl");
+  // xhr.open("POST", widget.host + "/tourclient/api/orderapi/PayTravelSystemUrl");
 
   private soapClient: any;
   public initSOAP() {
@@ -209,7 +274,7 @@ export class DsService {
 
   public quotaGetPlaces(date: string, day: number): any {
     const body = {
-      sHdKey: 6443,
+      sHdKey: 6443, // TESS
       sDateBeg: date,
       sNDays: day
     };

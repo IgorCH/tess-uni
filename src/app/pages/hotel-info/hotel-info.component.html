@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4>
+            {{hotelInfo?.HotelData.Name}}
+            <sup>{{hotelInfo?.HotelData.Category}}</sup>
+          </h4>
+          от {{hotelInfo?.HotelData.MinPrice | currency}}
+          {{hotelInfo?.HotelData.Currency}} <br>
+          {{hotelInfo?.HotelData.City}}
+          {{hotelInfo?.HotelData.Country}} <br>
+
+          Рейтинг: {{hotelInfo?.HotelData.Rayting}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body">
+          <div [innerHTML]="hotelInfo?.HotelData.Description | safeHtml"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div>Тип питания: {{hotelInfo?.HotelData.MealType}}</div>
+          <div>Сервис: {{hotelInfo?.HotelData.RoomService}}</div>
+          <div>Спорт сервис: {{hotelInfo?.HotelData.SportService}}</div>
+          <div>Пляжный сервис: {{hotelInfo?.HotelData.BeachService}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12" *ngIf="hotelInfo">
+      <div class="card">
+        <div class="card-body">
+          <h5>Апартаменты</h5>
+          HotelRoom: {{hotelInfo?.HotelData.HotelRoom | json}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h5>Карта</h5>
+          <div id="map" style="height: 400px"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5>Контакты</h5>
+          <div>Email:&nbsp;{{hotelInfo?.HotelData.HotelContactInfo.Email}}</div>
+          <div>Факс:&nbsp;{{hotelInfo?.HotelData.HotelContactInfo.Fax}}</div>
+          <div>Тел.:&nbsp;{{hotelInfo?.HotelData.HotelContactInfo.Phone}}</div>
+          <div>Адрес:&nbsp;{{hotelInfo?.HotelData.HotelContactInfo.Address}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
